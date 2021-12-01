@@ -1,0 +1,8 @@
+@import '~@s-ui/theme/lib/index';
+
+.sui-ThumbnailList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: $g-l;
+  row-gap: $g-xl;
+}
