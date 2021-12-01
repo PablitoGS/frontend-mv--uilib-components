@@ -1,12 +1,25 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
-export default function HeaderSearch() {
+const HeaderSearch = ({handleClick, value, handleChange, placeholder}) => {
   return (
     <div className="sui-HeaderSearch">
-      <h1>HeaderSearch</h1>
+      <input
+        type="text"
+        value={value}
+        placeholder={placeholder}
+        onChange={handleChange}
+      />
+      <button onClick={handleClick}>BUSCAR PELICULAS</button>
     </div>
   )
 }
 
 HeaderSearch.displayName = 'HeaderSearch'
-HeaderSearch.propTypes = {}
+HeaderSearch.propTypes = {
+  handleClick: PropTypes.func,
+  value: PropTypes.string,
+  handleChange: PropTypes.func,
+  placeholder: PropTypes.string
+}
+
+export default HeaderSearch
