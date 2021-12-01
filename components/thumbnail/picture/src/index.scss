@@ -4,8 +4,8 @@
   border: $bdrs-s solid $c-black;
   border-radius: 6px;
   background-color: $c-black;
-  display: grid;
   height: 100%;
+  padding: $p-s;
 
   &-title {
     font-size: $fz-s;
@@ -13,7 +13,6 @@
   }
 
   &-image {
-    border-radius: 6px;
     overflow: hidden;
   }
 
