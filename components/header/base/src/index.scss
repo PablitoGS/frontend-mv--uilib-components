@@ -1,0 +1,12 @@
+@import '~@s-ui/theme/lib/index';
+
+.sui-HeaderBase {
+  border-bottom: $bdrs-s solid $c-black;
+  padding: $p-s $p-xxxl;
+
+  header {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+  }
+}
