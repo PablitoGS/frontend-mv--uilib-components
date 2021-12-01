@@ -6,11 +6,12 @@
   margin: 20px auto;
   width: 30%;
 
-  input {
+  &-input {
     flex: 1 1 auto;
   }
-  button {
+  &-button {
     cursor: pointer;
+    font-weight: $fw-bold;
     outline: none;
   }
 }
