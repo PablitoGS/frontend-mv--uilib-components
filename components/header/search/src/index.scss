@@ -7,11 +7,19 @@
   width: 30%;
 
   &-input {
+    border-radius: $bdrs-l;
     flex: 1 1 auto;
   }
+
   &-button {
+    background-color: transparent;
+    border: 1px solid $c-white;
+    border-radius: $bdrs-l;
+    color: $c-white;
     cursor: pointer;
     font-weight: $fw-bold;
     outline: none;
+    padding: 0 $p-l;
+    margin-left: $m-m;
   }
 }
