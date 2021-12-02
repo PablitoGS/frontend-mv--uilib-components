@@ -1,0 +1,28 @@
+@import '~@s-ui/theme/lib/index';
+
+.sui-CardMovie {
+  background-color: $c-white;
+  border: 2px solid $c-black;
+  border-radius: $bdrs-xl;
+  box-shadow: $bxsh-l;
+  color: $c-black;
+  display: flex;
+  padding: $p-l;
+
+  &-description {
+    padding: 0 $p-l;
+
+    &Title {
+      font-size: $fz-xxxl;
+    }
+    &Subtitle {
+      font-size: $fz-m;
+      color: $c-gray;
+    }
+
+    &Text {
+      font-size: $fz-l;
+      margin-top: $m-l;
+    }
+  }
+}
