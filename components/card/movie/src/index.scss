@@ -2,7 +2,7 @@
 
 .sui-CardMovie {
   background-color: $c-white;
-  border: 2px solid $c-black;
+  border: $bdw-m solid $c-black;
   border-radius: $bdrs-xl;
   box-shadow: $bxsh-l;
   color: $c-black;
@@ -16,8 +16,8 @@
       font-size: $fz-xxxl;
     }
     &Subtitle {
-      font-size: $fz-m;
       color: $c-gray;
+      font-size: $fz-m;
     }
 
     &Text {
