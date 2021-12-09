@@ -6,51 +6,35 @@
 /* eslint no-undef:0 */
 
 import ReactDOM from 'react-dom'
+import {fireEvent} from '@testing-library/react'
+import sinon from 'sinon'
 
-import chai, {expect} from 'chai'
+import chai from 'chai'
 import chaiDOM from 'chai-dom'
-import Component from '../src/index'
+import SearchComponent from '../src/index'
 
 chai.use(chaiDOM)
 
 describe('HeaderSearch', () => {
-  const setup = setupEnvironment(Component)
+  const setup = setupEnvironment(SearchComponent)
 
-  it('should render without crashing', () => {
+  it('when click on search should search', () => {
     // Given
-    const props = {}
+
+    const spy = sinon.spy()
+
+    const props = {
+      textButton: 'Submit',
+      handleClick: spy
+    }
 
     // When
-    const component = <Component {...props} />
+    const {getByText} = setup(props)
+
+    const button = getByText('Submit')
+    fireEvent.click(button)
 
     // Then
-    const div = document.createElement('div')
-    ReactDOM.render(component, div)
-    ReactDOM.unmountComponentAtNode(div)
-  })
-
-  it('should NOT render null', () => {
-    // Given
-    const props = {}
-
-    // When
-    const {container} = setup(props)
-
-    // Then
-    expect(container.innerHTML).to.be.a('string')
-    expect(container.innerHTML).to.not.have.lengthOf(0)
-  })
-
-  it.skip('should NOT extend classNames', () => {
-    // Given
-    const props = {className: 'extended-classNames'}
-    const findSentence = str => string => string.match(new RegExp(`S*${str}S*`))
-
-    // When
-    const {container} = setup(props)
-    const findClassName = findSentence(props.className)
-
-    // Then
-    expect(findClassName(container.innerHTML)).to.be.null
+    sinon.assert.calledOnce(spy)
   })
 })

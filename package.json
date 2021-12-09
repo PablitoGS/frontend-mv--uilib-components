@@ -28,6 +28,7 @@
     "@s-ui/studio": "10",
     "@s-ui/test": "4.34.0",
     "husky": "4.3.0",
+    "sinon": "^12.0.1",
     "validate-commit-msg": "2.14.0"
   },
   "dependencies": {
