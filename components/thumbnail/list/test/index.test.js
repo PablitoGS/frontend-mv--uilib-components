@@ -12,7 +12,7 @@ import ThumbnailList from '../src/index'
 
 chai.use(chaiDOM)
 
-describe('ThumbnailLIst', () => {
+describe('ThumbnailList', () => {
   it('should display a list', () => {
     const {getByText} = render(
       <ThumbnailList>
