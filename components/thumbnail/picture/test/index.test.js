@@ -27,7 +27,6 @@ describe('ThumbnailPicture', () => {
 
     expect(getByText('Some image')).to.be.visible
     expect(imageByAlt).to.be.visible
-    expect(imageByAlt).to.be.visible
     expect(imageByAlt).to.be.equal(imageByRole)
   })
 })
