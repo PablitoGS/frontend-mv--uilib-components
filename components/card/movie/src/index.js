@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 
+const BASE_CLASS = 'sui-CardMovie'
+const BASE_CLASS_DESCRIPTION = `${BASE_CLASS}-description`
+
 export default function CardMovie({src, alt, title, subtitle, description}) {
-  const BASE_CLASS = 'sui-CardMovie'
-  const BASE_CLASS_DESCRIPTION = `${BASE_CLASS}-description`
   return (
     <div className={BASE_CLASS}>
       <div className={`${BASE_CLASS}-image`}>
@@ -20,7 +21,7 @@ export default function CardMovie({src, alt, title, subtitle, description}) {
 
 CardMovie.displayName = 'CardMovie'
 CardMovie.propTypes = {
-  src: PropTypes.string,
+  src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
